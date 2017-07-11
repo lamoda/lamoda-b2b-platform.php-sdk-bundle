@@ -6,7 +6,7 @@
     "require":      {
         "symfony/framework-bundle": "2.*",
         "doctrine/orm": "*",
-        "kupishoes/leos.partner.php-sdk": "~1.0.0"
+        "kupishoes/leos.partner.php-sdk": "~1.0"
     },
     "repositories": {
         "leos.partner.php-sdk": {
