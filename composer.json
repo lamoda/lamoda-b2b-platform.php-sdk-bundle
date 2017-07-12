@@ -11,7 +11,7 @@
     "repositories": {
         "leos.partner.php-sdk": {
             "type": "vcs",
-            "url": "git@github.com:pavelsavelyev/lamoda-b2b-platform.php-sdk-bundle.git"
+            "url": "git@github.com:pavelsavelyev/lamoda-b2b-platform.php-sdk.git"
         },
         "leos.partner.dto": {
             "type": "vcs",
