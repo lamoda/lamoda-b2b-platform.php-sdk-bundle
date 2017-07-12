@@ -4,7 +4,7 @@
     "description":  "PHP-SDK SDK Bundle for interacting with Lamoda B2B Platform",
     "license":      "Private",
     "require":      {
-        "symfony/framework-bundle": "2.*",
+        "symfony/framework-bundle": "2.*|3.*",
         "doctrine/orm": "*",
         "kupishoes/leos.partner.php-sdk": "~1.0.0"
     },
