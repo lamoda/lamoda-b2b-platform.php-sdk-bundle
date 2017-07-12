@@ -19,12 +19,11 @@
         }
     },
     "autoload":     {
-        "psr-0": {
-            "LamodaB2B\\Bundle\\LamodaB2BBundle": ""
+        "psr-4": {
+            "LamodaB2B\\Bundle\\LamodaB2BBundle\\": "src/"
         }
     },
     "config": {
         "bin-dir": "bin"
-    },
-    "target-dir":   "LamodaB2B/Bundle/LamodaB2BBundle"
+    }
 }
