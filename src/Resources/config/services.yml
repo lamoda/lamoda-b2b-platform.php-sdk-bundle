@@ -2,41 +2,45 @@ services:
     lamoda_b2b.sender:
         class: LamodaB2B\HTTP\Client\Sender
         arguments:
-            - %lamoda_b2b.url%
-            - @logger
-            - %lamoda_b2b.debug%
+            - "%lamoda_b2b.url%"
+            - "@logger"
+            - "%lamoda_b2b.debug%"
     lamoda_b2b.client:
         class: LamodaB2B\HTTP\Client\LamodaB2BClient
         arguments:
-            - @lamoda_b2b.sender
-            - @lamoda_b2b.auth_client
-            - @lamoda_b2b.storage.access_token
+            - "@lamoda_b2b.sender"
+            - "@lamoda_b2b.auth_client"
+            - "@lamoda_b2b.storage.access_token"
     lamoda_b2b.auth_client:
         class: LamodaB2B\HTTP\Client\AuthLamodaB2BClient
         arguments:
-            - @lamoda_b2b.sender
-            - %lamoda_b2b.grant_type%
-            - %lamoda_b2b.auth%
+            - "@lamoda_b2b.sender"
+            - "%lamoda_b2b.grant_type%"
+            - "@lamoda_b2b.storage.auth"
     lamoda_b2b.repository.access_token:
         class: LamodaB2B\Entity\AccessTokenRepository
-        factory: [@doctrine.orm.default_entity_manager, getRepository]
+        factory: ["@doctrine.orm.default_entity_manager", getRepository]
         arguments:
             - LamodaB2BBundle:AccessToken
         public: false
     lamoda_b2b.storage.access_token:
         class: LamodaB2B\Storage\AccessTokenStorage
         arguments:
-            - @lamoda_b2b.repository.access_token
-            - @lamoda_b2b.factory.access_token
+            - "@lamoda_b2b.repository.access_token"
+            - "@lamoda_b2b.factory.access_token"
         public: false
+    lamoda_b2b.storage.auth:
+        class: LamodaB2B\Storage\ArrayAuthStorage
+        arguments:
+            - "%lamoda_b2b.auth%"
     lamoda_b2b.factory.access_token:
         class: LamodaB2B\Bundle\LamodaB2BBundle\Factory\AccessTokenFactory
         public: false
     lamoda_b2b.provider.tracking:
         class: LamodaB2B\Provider\TrackingProvider
         arguments:
-            - @lamoda_b2b.client
+            - "@lamoda_b2b.client"
     lamoda_b2b.provider.stock_state:
         class: LamodaB2B\Provider\StockStateProvider
         arguments:
-            - @lamoda_b2b.client
+            - "@lamoda_b2b.client"
