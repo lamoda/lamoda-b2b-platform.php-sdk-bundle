@@ -8,16 +8,6 @@
         "doctrine/orm": "*",
         "lamoda/lamoda-b2b-platform.php-sdk": "~2.0"
     },
-    "repositories": {
-        "leos.partner.php-sdk": {
-            "type": "vcs",
-            "url": "git@github.com:lamoda/lamoda-b2b-platform.php-sdk.git"
-        },
-        "leos.partner.dto": {
-            "type": "vcs",
-            "url": "git@github.com:lamoda/lamoda-b2b-platform.dto.git"
-        }
-    },
     "autoload":     {
         "psr-4": {
             "LamodaB2B\\Bundle\\LamodaB2BBundle\\": "src/"
