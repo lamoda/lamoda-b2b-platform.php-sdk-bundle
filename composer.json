@@ -1,21 +1,21 @@
 {
-    "name":         "kupishoes/leos.partner.php-sdk-bundle",
+    "name":         "lamoda/lamoda-b2b-platform.php-sdk-bundle",
     "type":         "symfony-bundle",
     "description":  "PHP-SDK SDK Bundle for interacting with Lamoda B2B Platform",
-    "license":      "Private",
+    "license":      "Apache-2.0",
     "require":      {
         "symfony/framework-bundle": ">=2.0",
         "doctrine/orm": "*",
-        "kupishoes/leos.partner.php-sdk": "~2.0"
+        "lamoda/lamoda-b2b-platform.php-sdk": "~2.0"
     },
     "repositories": {
         "leos.partner.php-sdk": {
             "type": "vcs",
-            "url": "git@github.com:pavelsavelyev/lamoda-b2b-platform.php-sdk.git"
+            "url": "git@github.com:lamoda/lamoda-b2b-platform.php-sdk.git"
         },
         "leos.partner.dto": {
             "type": "vcs",
-            "url": "git@github.com:pavelsavelyev/lamoda-b2b-platform.dto.git"
+            "url": "git@github.com:lamoda/lamoda-b2b-platform.dto.git"
         }
     },
     "autoload":     {
