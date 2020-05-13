@@ -44,3 +44,7 @@ services:
         class: LamodaB2B\Provider\StockStateProvider
         arguments:
             - "@lamoda_b2b.client"
+    lamoda_b2b.provider.mapping_categories:
+        class: LamodaB2B\Provider\MappingCategoriesDataProvider
+        arguments:
+            - "@lamoda_b2b.client"
